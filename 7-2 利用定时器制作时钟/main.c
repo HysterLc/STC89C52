@@ -3,12 +3,15 @@
 #include "Timer0.h"
 #include "LCD1602.h"
 
-unsigned char Sec=0;
-unsigned char Min=0;
-unsigned char Hour=0;
+unsigned char Sec;
+unsigned char Min;
+unsigned char Hour;
 
 int main()
 {
+    Sec=50;
+    Min=11;
+    Hour=22;
     LCD_Init();
     LCD_ShowString(1,1,"Time:  :  :");       //初始化显示，定时器模块
     Timer0_Init();
