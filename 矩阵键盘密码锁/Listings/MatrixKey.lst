@@ -1,0 +1,165 @@
+C51 COMPILER V9.54   MATRIXKEY                                                             11/08/2023 13:55:11 PAGE 1   
+
+
+C51 COMPILER V9.54, COMPILATION OF MODULE MATRIXKEY
+OBJECT MODULE PLACED IN .\Objects\MatrixKey.obj
+COMPILER INVOKED BY: C:\Keil_v5\C51\BIN\C51.EXE MatrixKey.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings
+                    -\MatrixKey.lst) TABS(2) OBJECT(.\Objects\MatrixKey.obj)
+
+line level    source
+
+   1          #include <REGX52.H>
+   2          #include "Delay.h"
+   3          
+   4          /**
+   5          
+   6          
+   7          矩阵键盘3X3+0
+   8          
+   9          */
+  10          
+  11          
+  12          
+  13          unsigned char MatrixKey()
+  14          {
+  15   1        int i=3;
+  16   1        int m=1;
+  17   1        unsigned char KeyNumber=0;
+  18   1      
+  19   1        P1=0xFF;           //第一列
+  20   1        P1_3=0;
+  21   1        if(P1_7==0)
+  22   1        {
+  23   2          Delay(20);
+  24   2          while(P1_7==0);
+  25   2          Delay(20);
+  26   2          KeyNumber=1;   //（1，1）
+  27   2        }
+  28   1        if(P1_6==0)
+  29   1        {
+  30   2          Delay(20);
+  31   2          while(P1_6==0);
+  32   2          Delay(20);
+  33   2          KeyNumber=4;  //（2，1）
+  34   2        }
+  35   1        if(P1_5==0)
+  36   1        {
+  37   2          Delay(20);
+  38   2          while(P1_5==0);
+  39   2        
+  40   2          Delay(20);
+  41   2          KeyNumber=7;  //（3，1）
+  42   2        }
+  43   1          if(P1_4==0)
+  44   1        {
+  45   2          Delay(20);
+  46   2          while(P1_4==0);
+  47   2        
+  48   2          Delay(20);
+  49   2          KeyNumber=11;  //（3，1）
+  50   2        }
+  51   1          
+  52   1        
+  53   1        
+  54   1        P1=0xFF;            //第二列
+C51 COMPILER V9.54   MATRIXKEY                                                             11/08/2023 13:55:11 PAGE 2   
+
+  55   1        P1_2=0;
+  56   1        if(P1_7==0)
+  57   1        {
+  58   2          Delay(20);
+  59   2          while(P1_7==0);
+  60   2          
+  61   2          Delay(20);
+  62   2          KeyNumber=2;    //（1，2）
+  63   2        }
+  64   1        if(P1_6==0)
+  65   1        {
+  66   2          Delay(20);
+  67   2          while(P1_6==0);
+  68   2          
+  69   2          Delay(20);
+  70   2          KeyNumber=5;  //（2，2）
+  71   2        }
+  72   1        if(P1_5==0)
+  73   1        {
+  74   2          Delay(20);
+  75   2          while(P1_5==0);
+  76   2        
+  77   2          Delay(20);
+  78   2          KeyNumber=8; //（2，3）
+  79   2        }
+  80   1        
+  81   1          if(P1_4==0)
+  82   1        {
+  83   2          Delay(20);
+  84   2          while(P1_4==0);
+  85   2          
+  86   2          Delay(20);
+  87   2          KeyNumber=10; //（2，3）
+  88   2        }
+  89   1        
+  90   1          
+  91   1        
+  92   1        
+  93   1        P1=0xFF;      //第三列
+  94   1        P1_1=0;
+  95   1        if(P1_7==0)
+  96   1        {
+  97   2          Delay(20);
+  98   2          while(P1_7==0);
+  99   2          Delay(20);
+ 100   2          KeyNumber=3;  //(1,3)
+ 101   2        }
+ 102   1        if(P1_6==0)
+ 103   1        {
+ 104   2          Delay(20);
+ 105   2          while(P1_6==0);
+ 106   2        
+ 107   2          Delay(20);
+ 108   2          KeyNumber=6;  //(2,3)
+ 109   2        }
+ 110   1        if(P1_5==0)
+ 111   1        {
+ 112   2          Delay(20);
+ 113   2          while(P1_5==0);
+ 114   2          Delay(20);
+ 115   2          KeyNumber=9; //(3,3)
+ 116   2        }
+C51 COMPILER V9.54   MATRIXKEY                                                             11/08/2023 13:55:11 PAGE 3   
+
+ 117   1        if(P1_4==0)
+ 118   1        {
+ 119   2          Delay(20);
+ 120   2          while(P1_4==0);
+ 121   2          Delay(20);
+ 122   2          KeyNumber=12;
+ 123   2          
+ 124   2        }
+ 125   1        
+ 126   1        
+ 127   1        
+ 128   1      
+ 129   1      
+ 130   1      
+ 131   1        
+ 132   1        
+ 133   1        
+ 134   1          return KeyNumber;
+ 135   1      }
+ 136            
+ 137          
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    308    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----       5
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
