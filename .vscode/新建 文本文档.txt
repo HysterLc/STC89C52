@@ -1,0 +1,17 @@
+{
+    "configurations": [
+        {
+            "name": "Keil",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "C:/Keil_v5/C51/INC/"
+            ],
+            "defines": [],
+            "compilerPath": "C:/Keil_v5/C51/BIN/C51.exe",
+            "cStandard": "c11",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "gcc-x64"
+        }
+    ],
+    "version": 4
+}

@@ -1,4 +1,4 @@
-C51 COMPILER V9.54   KEY                                                                   11/21/2023 19:50:28 PAGE 1   
+C51 COMPILER V9.54   KEY                                                                   11/27/2023 20:13:38 PAGE 1   
 
 
 C51 COMPILER V9.54, COMPILATION OF MODULE KEY
@@ -20,8 +20,8 @@ line level    source
   10          {
   11   1        unsigned char KeyNumber=0;
   12   1        
-  13   1        if(P3_0==0){Delay(20);while(P3_0==0);Delay(20);KeyNumber=1;}
-  14   1        if(P3_1==0){Delay(20);while(P3_1==0);Delay(20);KeyNumber=2;}
+  13   1        if(P3_1==0){Delay(20);while(P3_0==0);Delay(20);KeyNumber=1;}
+  14   1        if(P3_0==0){Delay(20);while(P3_1==0);Delay(20);KeyNumber=2;}
   15   1        if(P3_2==0){Delay(20);while(P3_2==0);Delay(20);KeyNumber=3;}
   16   1        if(P3_3==0){Delay(20);while(P3_3==0);Delay(20);KeyNumber=4;}
   17   1        
